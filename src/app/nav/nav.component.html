@@ -1,0 +1,9 @@
+<nav>
+  <h4>Main Menu</h4><br>
+  <ul>
+    <li><a (click)="homeComponentDoorbell($event)" routerLink="Home">Home</a></li>
+    <li><a routerLink="create-study">Add New Question</a></li>
+    <li *ngIf="!loggedInUser"><a routerLink="user-login">User Login</a></li>
+    <li *ngIf="loggedInUser"><a routerLink="user-logout">Log Out</a></li>
+  </ul>
+</nav>

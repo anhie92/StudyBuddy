@@ -1,0 +1,24 @@
+<main>
+  <div>
+    <button (click)="showAnswers($event)" >{{answers ? 'Hide All Answers' : 'Show All Answers'}}</button>
+    <button 
+    class="showFavoriteButton" 
+    *ngIf="loggedInUser" (click)="onFiltered()"> 
+    {{filtered ? "View All Questions" :
+      "View only Favorites"}} 
+    </button>
+  </div>
+  <br>
+  <div *ngIf="!filtered || !loggedInUser">
+    <div *ngFor="let study of studies;index as i">
+      <app-study [showAll]="answers" [index]="i" [study]="study"></app-study>
+      <hr>
+    </div>
+  </div>
+  <div *ngIf="filtered && loggedInUser">
+    <div *ngFor="let study of loggedInUser.Favorites;index as i">
+      <app-study  [index]="i" [study]="study"></app-study>
+      <hr>
+    </div>
+  </div>
+</main>

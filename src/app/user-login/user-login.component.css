@@ -1,0 +1,13 @@
+input {
+  width: 25%;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.Login-error {
+  color: rgb(255, 0, 51);
+}

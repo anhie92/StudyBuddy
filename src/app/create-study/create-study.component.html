@@ -1,0 +1,19 @@
+<main>
+  <div *ngIf="successMessage">
+    {{ successMessage }}
+  </div>
+  <div *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <form #newStudy="ngForm" (ngSubmit)="postStudy(newStudy)">
+    <label for="question">Question</label>
+    <input name="question" ngModel />
+    <br>
+    <label for="answer">Answer</label>
+    <input name="answer" ngModel />
+    <br>
+    <label for="submit"></label><br>
+    <button>Add Question</button>
+  </form>
+</main>

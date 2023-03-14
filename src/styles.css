@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #E4F0FF;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 0px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 2px;
+    grid-template-areas:
+        "header header header"
+        "nav content side";        
+    height: 100vh;
+
+}
+
+app-header {
+    color: white;
+    font-size: 16px;
+    grid-area: header;
+    text-align: center;
+    background-color: #7e7d7d;
+}
+
+
+app-nav {
+    grid-area: nav;
+    margin-left: 0.1rem;
+    background-color: #adadad;
+
+}
+
+app-study,
+app-create-study,
+app-user-login,
+app-user-logout,
+app-home {
+    grid-area: content;
+    background-color: #f0ebdb;
+    padding: 20px;
+}
+
+.bi {
+    float: right;
+}
+
+.form {
+
+    margin: 10px 0;
+    border-radius: 10px;
+
+}
+
+.bunton {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: pink;
+    box-shadow: 1px 0 1px 0 grey;
+}
+.bunton::click {
+    transform: translateX(2px)
+}
